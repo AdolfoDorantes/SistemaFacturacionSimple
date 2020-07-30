@@ -1,0 +1,33 @@
+body {
+  font-family: 'Yantramanav';font-size: 16px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-image:linear-gradient(#338AFF, #D1E5FA);
+  color: #0B1E32;
+  font-size: 20px;
+}
+
+li a:hover:not(.active) {
+  background-image:linear-gradient(#0C3C6F, #58A6F9);
+  color: white;
+}

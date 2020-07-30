@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<link rel="stylesheet" type="text/css" href="css/inicio.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Yantramanav' rel='stylesheet'>
+<title>Registro de personas</title>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="inicio.html">Inicio</a></li>
+  <li><a href="listado.php">Listado de facturas</a></li>
+  <li><a href="alta.php">Alta de facturas</a></li>
+  <li><a href="pdf.php">Generar PDF de una factura</a></li>
+  <li><a href="#" onclick="salir();">Salir</a></li>
+</ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:100%;">
+  <h2>Bienvenido <label id="usuario_text"></label>.</h2>
+  <h3>Decida que desea realizar mediante el menu a su derecha.</h3>
+  <p>Cualquier cambio que realice sera registrado bajo su nombre de usuario y datos personales, esto con la finalidad de llevar un control de cambios.</p>
+</div>
+
+</body>
+<script>
+    let usuario = localStorage.getItem('nombre_usuario');
+    console.log(usuario);
+    document.getElementById("usuario_text").innerHTML= usuario;
+    function salir(){
+      localStorage.clear();
+      window.location="index.html";
+    }
+</script>
+</html>
